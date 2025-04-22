@@ -1,4 +1,4 @@
-pipline{
+pipeline{
     agent any
     environment{
         DOCKER_HUB_BACK="ujjawalsharma7734/back"
@@ -12,13 +12,13 @@ pipline{
        
          stage('Stop and Remove Containers') {
             steps {
-                sh 'docker compose down || true'
+                bat 'docker compose down || true'
             }
         }
 
  stage('Build Docker Images') {
             steps {
-                sh 'docker compose build'
+                bat 'docker compose build'
             }
         }
 
@@ -38,7 +38,7 @@ pipline{
 
      stage('Start Containers') {
             steps {
-                sh 'docker compose up -d'
+                bat 'docker compose up -d'
             }
         }
 }

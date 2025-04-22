@@ -1,4 +1,4 @@
-pipline{
+pipeline{
     agent any
     environment{
         DOCKER_HUB_BACK="ujjawalsharma7734/back"

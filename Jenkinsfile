@@ -9,6 +9,14 @@ pipeline{
         BACKEND_DIR=""
     }
     stages{
+
+          stage('Inject .env') {
+            steps {
+                withCredentials([string(credentialsId: 'GEMINI_API_KEY', variable: 'GEMINI_KEY')]) {
+                    writeFile file: '.env', text: "GEMINI_API_KEY=${env.GEMINI_KEY}"
+                }
+            }
+        }
        
          stage('Stop and Remove Containers') {
             steps {

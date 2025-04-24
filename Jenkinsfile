@@ -29,7 +29,7 @@ pipeline{
                 bat '''
                     timestamp=$(date +"%Y%m%d_%H%M%S")
                     mkdir -p backups
-                    zip -r backups/backup_$timestamp.zip .
+                    zip -r backups/backup_%timestamp%.zip .
                 '''
             }
         }

@@ -5,8 +5,7 @@ pipeline{
         DOCKER_HUB_FRONT="ujjawalsharma7734/front"
         FRONTENT_IMAGE="ai-frontend"
         BACKEND_IMAGE="ai-backend"
-        FRONTEND_DIR=""
-        BACKEND_DIR=""
+      
     }
     stages{
 
@@ -24,15 +23,15 @@ pipeline{
             }
         }
 
-        stage('Backup Files') {
-            steps {
-                bat '''
-                    timestamp=$(date +"%Y%m%d_%H%M%S")
-                    mkdir -p backups
-                    zip -r backups/backup_%timestamp%.zip .
-                '''
-            }
-        }
+        // stage('Backup Files') {
+        //     steps {
+        //         bat '''
+        //             timestamp=$(date +"%Y%m%d_%H%M%S")
+        //             mkdir -p backups
+        //             zip -r backups/backup_%timestamp%.zip .
+        //         '''
+        //     }
+        // }
 
  stage('Build Docker Images') {
             steps {

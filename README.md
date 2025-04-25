@@ -9,7 +9,7 @@ An **AI-powered code review** platform that analyzes, reviews, and suggests impr
 ✅ **Bug Detection & Fixes** – Identify potential issues and improvements  
 ✅ **Multi-Language Support** – Works with multiple programming languages  
 ✅ **User-Friendly Interface** – Simple and intuitive design for seamless usage  
-✅ **MERN Stack & Gemini API** – Built with modern web technologies  
+✅ **MERN Stack & Gemini API** – Built with modern web technologies.  
 
 ## 🛠️ Tech Stack  
 - **Frontend:** React,   

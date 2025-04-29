@@ -47,7 +47,7 @@ function App() {
           </div>
           <div
             onClick={reviewCode}
-            className="review">submit</div>
+            className="review">REVIEW</div>
         </div>
         <div className="right">
           <Markdown

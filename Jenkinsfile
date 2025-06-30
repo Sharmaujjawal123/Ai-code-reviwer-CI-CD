@@ -9,13 +9,14 @@ pipeline{
     }
     stages{
 
-          stage('Inject .env') {
-            steps {
-                withCredentials([string(credentialsId: 'GOOGLE_GEMINI_KEY', variable: 'GEMINI_KEY')]) {
-                    writeFile file: '.env', text: "GOOGLE_GEMINI_KEY=${env.GEMINI_KEY}"
-                }
-            }
+        stage('Inject .env') {
+    steps {
+        withCredentials([string(credentialsId: 'GOOGLE_GEMINI_KEY', variable: 'GEMINI_KEY')]) {
+            bat 'echo GOOGLE_GEMINI_KEY=%GEMINI_KEY% > .env'
         }
+    }
+}
+
        
          stage('Stop and Remove Containers') {
             steps {

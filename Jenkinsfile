@@ -24,15 +24,15 @@ pipeline{
             }
         }
 
-        stage('Backup Files') {
-            steps {
-                bat '''
-                    timestamp=$(date +"%Y%m%d_%H%M%S")
-                    mkdir -p backups
-                    zip -r backups/backup_%timestamp%.zip .
-                '''
-            }
-        }
+        // stage('Backup Files') {
+        //     steps {
+        //         bat '''
+        //             timestamp=$(date +"%Y%m%d_%H%M%S")
+        //             mkdir -p backups
+        //             zip -r backups/backup_%timestamp%.zip .
+        //         '''
+        //     }
+        // }
 
  stage('Build Docker Images') {
             steps {
